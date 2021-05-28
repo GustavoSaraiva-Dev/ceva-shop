@@ -1,0 +1,28 @@
+.shopContainer {
+	@apply w-full h-full flex flex-col justify-center items-center p-6;
+	.productPanel {
+		@apply w-full h-full flex flex-col items-center rounded-2xl bg-teal-300;
+
+		.headContainer {
+			@apply flex justify-between w-11/12 h-auto my-5 rounded-3xl px-6;
+			.breadCrumbs {
+				@apply w-2/12 h-12 bg-purple-300 rounded-full;
+			}
+			.title {
+				@apply w-2/12 h-12 bg-purple-300 rounded-full;
+			}
+			.results {
+				@apply w-2/12 h-12 bg-purple-300 rounded-full;
+			}
+		}
+
+		.productShowcase {
+			@apply w-full rounded-2xl grid  grid-cols-1 gap-4 overflow-y-scroll m-6 place-items-center;
+			@apply sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4;
+			height: 36rem;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+}

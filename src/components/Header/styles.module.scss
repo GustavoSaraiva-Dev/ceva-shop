@@ -1,0 +1,22 @@
+.headerContainer {
+	@apply w-full h-20 flex justify-between items-center mt-6 px-6;
+
+	.logo {
+		@apply w-4/12 h-auto;
+		img {
+			@apply w-5/12 cursor-pointer;
+		}
+	}
+	.menu {
+		@apply w-4/12 h-12 flex justify-between items-center px-10;
+		span {
+			@apply block p-2 cursor-pointer font-bold;
+			&.active {
+				@apply text-red-600;
+			}
+		}
+	}
+	.cart {
+		@apply w-4/12 h-12 rounded-full bg-purple-300;
+	}
+}
