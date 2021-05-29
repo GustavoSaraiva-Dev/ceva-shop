@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--plant-green-50: #62bd69;
+	--plant-green-100: #5aab61;
+	--plant-green-200: #358856;
+	--plant-green-300: #30694b;
+	--plant-green-400: #25523b;
+	--plant-green-500: #0c3823;
+}
