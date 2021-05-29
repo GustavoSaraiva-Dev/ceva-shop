@@ -1,14 +1,28 @@
+import axios from "axios";
+import { GetStaticProps } from "next";
 import styles from "../../styles/pages/home.module.scss";
 import { Header } from "../components/Header";
 import ShopContainer from "../components/ShopContainer";
+import { api } from "./api/server";
 
-export default function Home() {
+type HomeProps = {
+	products: [];
+};
+
+export default function Home({ products }: HomeProps) {
 	return (
-		<div className={styles.global}>
-			<div className={styles.homeContainer}>
-				<Header />
-				<ShopContainer />
-			</div>
+		<div>
+			<ShopContainer products={products} />
 		</div>
 	);
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+	const { data: products } = await api.get("products");
+	return {
+		props: {
+			products,
+		},
+		revalidate: 240,
+	};
+};

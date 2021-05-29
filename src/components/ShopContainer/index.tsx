@@ -5,9 +5,19 @@ import styles from "./styles.module.scss";
 
 interface ShopContainerProps {
 	children?: ReactNode;
+	products: Array<Product>;
 }
 
-function ShopContainer({ children }: ShopContainerProps) {
+type Product = {
+	id: number;
+	title: string;
+	price: string;
+	category: string;
+	description: string;
+	image: string;
+};
+
+function ShopContainer({ children, products }: ShopContainerProps) {
 	return (
 		<div className={styles.shopContainer}>
 			<div className={styles.productPanel}>
@@ -17,20 +27,9 @@ function ShopContainer({ children }: ShopContainerProps) {
 					<div className={styles.results}></div>
 				</div>
 				<div className={styles.productShowcase}>
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
+					{products.map((product) => (
+						<ProductCard key={product.id} product={product} />
+					))}
 				</div>
 			</div>
 		</div>

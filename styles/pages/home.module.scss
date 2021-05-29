@@ -1,7 +1,15 @@
-.global {
-	@apply w-screen h-screen bg-green-100 grid place-items-center;
+.wrapper {
+	@apply flex;
 
-	.homeContainer {
-		@apply w-9/12 min-h-0 bg-green-200 m-6 rounded-3xl shadow-2xl border-8 border-green-300 flex flex-col items-center;
+	main {
+		@apply flex-1;
+
+		.global {
+			@apply w-screen h-screen bg-green-100 grid place-items-center;
+
+			.homeContainer {
+				@apply w-9/12 min-h-0 bg-green-200 m-6 rounded-3xl shadow-2xl border-8 border-green-300 flex flex-col items-center;
+			}
+		}
 	}
 }
