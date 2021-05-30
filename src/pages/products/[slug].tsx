@@ -66,6 +66,7 @@ function Products({ product }: ProductsProps) {
 						</div>
 					</div>
 					<p className={styles.description}>{product.description}</p>
+					<div className={styles.badges}></div>
 					<div className={styles.purchaseContainer}>
 						<div className={styles.amountGroup}>
 							<div className={styles.quantityText}>QTD</div>
