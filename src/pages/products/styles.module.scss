@@ -1,1 +1,151 @@
-/* The component style is inserted here. */
+.wrapper {
+	@apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 bg-gray-200;
+
+	.details {
+		@apply flex flex-col md:flex-row -mx-4;
+		.gallery {
+			@apply md:flex-1 px-4;
+			.container {
+				.currentPhoto {
+					@apply h-64 md:h-96 rounded-lg bg-gray-100 mb-4;
+
+					.imageWrapper {
+						@apply h-64 md:h-96 rounded-lg bg-gray-100 mb-4 flex items-center justify-center p-4;
+						img {
+							@apply h-full object-cover;
+						}
+					}
+				}
+				.photoGallery {
+					@apply flex -mx-2 mb-4;
+
+					.thumb {
+						@apply flex-1 px-2;
+
+						button {
+							@apply focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center ring-2 ring-indigo-300 ring-inset;
+						}
+					}
+				}
+			}
+		}
+		.info {
+			@apply md:flex-1 px-4;
+
+			.title {
+				@apply mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl;
+			}
+
+			.trade {
+				@apply text-gray-500 text-sm;
+			}
+
+			.priceAndDiscount {
+				@apply flex items-center space-x-4 my-4;
+
+				.priceContainer {
+					@apply rounded-lg bg-gray-100 flex py-2 px-3;
+
+					.currency {
+						@apply text-indigo-400 mr-1 mt-1;
+					}
+					.value {
+						@apply font-bold text-indigo-600 text-3xl;
+					}
+				}
+
+				.disountContainer {
+					@apply flex-1;
+
+					.discount {
+						@apply text-green-500 text-xl font-semibold;
+					}
+					.discountInfo {
+						@apply text-gray-400 text-sm;
+					}
+				}
+			}
+
+			.description {
+				@apply text-gray-500 line-clamp-5;
+			}
+
+			.purchaseContainer {
+				@apply flex py-4 space-x-4;
+
+				.amountGroup {
+					@apply relative;
+
+					.quantityText {
+						@apply text-center left-0 pt-2 right-0 absolute block text-xs uppercase text-gray-400 tracking-wide font-semibold;
+					}
+					.quantityValue {
+						@apply cursor-pointer appearance-none rounded-xl border border-gray-200 pl-4 pr-8 h-14 flex items-end pb-1;
+					}
+					svg {
+						@apply w-5 h-5 text-gray-400 absolute right-0 bottom-0 mb-2 mr-2;
+					}
+				}
+				.button {
+					@apply h-14 px-6 py-2 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white;
+				}
+			}
+		}
+	}
+
+	// .productContainer {
+	// 	@apply flex w-full h-full py-3;
+
+	// 	.productGallery {
+	// 		@apply w-6/12  flex flex-col;
+
+	// 		.photo {
+	// 			@apply h-4/6 flex justify-center items-center bg-white rounded-lg;
+
+	// 			img {
+	// 				@apply h-full w-9/12 object-contain p-4;
+	// 			}
+	// 		}
+
+	// 		.gallery {
+	// 			@apply w-full h-2/6 bg-red-300;
+	// 		}
+	// 	}
+
+	// 	.details {
+	// 		@apply w-6/12 h-full flex flex-col ml-4;
+
+	// 		.title {
+	// 			@apply text-2xl mb-4;
+	// 		}
+
+	// 		.trade {
+	// 			@apply mb-4;
+	// 		}
+
+	// 		.priceAndDiscount {
+	// 			@apply flex mb-4;
+	// 			.price {
+	// 				@apply grid place-items-center text-xl font-bold px-2 rounded-2xl bg-green-400;
+	// 			}
+	// 			.discount {
+	// 				@apply flex flex-col p-4 bg-yellow-500;
+	// 			}
+	// 		}
+
+	// 		.description {
+	// 			@apply line-clamp-4 mb-4;
+	// 		}
+
+	// 		.shopActions {
+	// 			@apply flex flex-row;
+	// 			select {
+	// 				@apply p-3 bg-white mr-6;
+	// 			}
+	// 			button {
+	// 				@apply p-4 bg-purple-500 rounded-md;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}

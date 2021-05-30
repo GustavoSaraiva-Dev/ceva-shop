@@ -1,5 +1,5 @@
 .headerContainer {
-	@apply w-full h-20 flex justify-between items-center mt-6 px-6;
+	@apply w-full h-20 flex justify-between items-center  p-6 sticky;
 
 	.logo {
 		@apply w-4/12 h-auto;
